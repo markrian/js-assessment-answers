@@ -38,6 +38,17 @@ define(function() {
       return ret;
     },
 
+    removeWithoutCopy : function(arr, item) {
+      var index = arr.indexOf(item);
+
+      while (index !== -1) {
+        arr.splice(index, 1);
+        index = arr.indexOf(item);
+      }
+
+      return arr;
+    },
+
     append : function(arr, item) {
       arr.push(item);
       return arr;
